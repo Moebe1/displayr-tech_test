@@ -6,6 +6,7 @@ from urllib.error import HTTPError, URLError
 from urllib.request import urlopen, Request
 import platform
 from pythonping import ping
+import sys
 
 print("""\nThis script will monitor the server and the website for changes. If the page is defaced or changed
     the resulting Hash will be different and you will see an alert on screen. The script will also periodically
