@@ -23,6 +23,7 @@ The repository contains IaC using Terraform to provision and deploy an EC2 insta
 1. Download the repository to your computer
 
 2. Ensure that you have the following installed and configured on your machine:
+  
   a. Terraform
   
 3. Open **aws_variables.tfvars** using a text editor
