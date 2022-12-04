@@ -44,7 +44,7 @@ time.sleep(10)
 while True:
     try:
         print("-" * 50)
-        print("\nPinging the server:")
+        print("Pinging the server:")
         ping(ip_address, count=1, verbose=True)
         print("-" * 50)
         
@@ -65,13 +65,17 @@ while True:
  
         # check if new hash is same as the previous hash
         if newHash == currentHash:
-            print("\n \033[1;30;42m No changes to the hash value detected \033[0;0m\n")
+            print("-" * 50)
+            print("\033[1;30;42m No changes to the hash value detected \033[0;0m\n")
+            print("-" * 50)
             continue
  
         # If the Hash changes
         else:
             # notify
+            print("-" * 50)
             print("\033[1;30;41m Hash has changed, check the site for defacement or other changes \033[0;0m\n")
+            print("-" * 50)
  
             response = urlopen(url).read()
  
