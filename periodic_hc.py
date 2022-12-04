@@ -11,10 +11,6 @@ print("""\nThis script will monitor the server and the website for changes. If t
     the resulting Hash will be different and you will see an alert on screen. The script will also periodically
     ping the server and display the RTT and IP address on screen.\n""")
 
-# site_url = sp.getoutput('terraform output -raw hello_world_link')
-# site_url_formatted= "http://" + site_url + "/index.html"
-# ip_address = sp.getoutput('terraform output -raw EC2_Instance_IP')
-
 try:
     site_url = sp.getoutput('terraform output -raw hello_world_link')
     site_url_formatted= "http://" + site_url + "/index.html"
