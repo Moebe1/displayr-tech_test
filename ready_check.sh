@@ -11,7 +11,7 @@ URL=$(terraform output -raw hello_world_link)
   RES=`curl — max-time 5 -s $URL > /dev/null`
   RES=$?
   if [ $RES -eq 0 ]; then
-   echo -e "${green}Website is UP! ${red}Down time=$DOWNCOUNT seconds${reset}"
+   echo -e "${green}Website is UP! ${green}Readiness time=$DOWNCOUNT seconds${reset}"
    echo -e
    echo -e "${bold}${green}Site URL: http://$URL/index.html${reset}"
    echo -e
