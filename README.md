@@ -109,7 +109,7 @@ pip3 install -r requirements.txt
 ```
 3. Run the script as administrator
 ```
-sudo python periodic_hc.py
+sudo python3 periodic_hc.py
 ```
 
 When the script executes, it will first get the Server URL and Server IP address from terraform output as raw.
