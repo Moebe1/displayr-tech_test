@@ -91,11 +91,14 @@ The repository contains a python script called periodic_hc.py
 This script uses the output from Terraform to get the EC2 instance URL and IP address and does the following checks:
 
   a. Ensures that the terraform output is available. If not, reminds user to deploy first.
+  
   b. Pings the server and displays the result, single ping
+  
   c. Computes the hash of the page and alrts the user if the Hash has changed. E.g. Error page, defacement etc.
 
 * **Note**: This script must be run as Administrator since the pyping library requires access to the network interface.
 **Run Instructions**
+
 1. Ensure that you have Python3, PIP3 installed and mark the script as executable by using chmod +x:
 ```
 chmod +x perodic_hc.py
