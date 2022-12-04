@@ -7,8 +7,7 @@ output "public_subnet_id" {
 }
 
 output "EC2_Instance_IP" {
-    value = aws_instance.hello-world.public_ip
-  
+    value = aws_instance.hello-world.public_ip 
 }
 
 output "hello_world_link" {
@@ -20,12 +19,9 @@ output "ec2_instance_type" {
 }
 
 output "ec2_instance_id" {
-    value = aws_instance.hello-world.id
-  
+    value = aws_instance.hello-world.id 
 }
 
 output "site_url" {
-
     value = ["http://${chomp(aws_instance.hello-world.public_dns)}/index.html"]
-  
 }
