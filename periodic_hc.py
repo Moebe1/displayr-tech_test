@@ -22,9 +22,9 @@ try:
     ip_address = sp.getoutput('terraform output -raw EC2_Instance_IP')
     
     if site_url:
-        print("\n\033[5;30;42m Got Site URL and EC2 Instance IP, Proceeding: \033[0;0m \n ")
-        print("\n",site_url)
-        print("\n",ip_address)
+        print("\n\033[1;30;42m Got Site URL and EC2 Instance IP, Proceeding: \033[0;0m \n ")
+        print("\n DNS Hostname:\033[5;30;42m %s \033[0;0m" % site_url)
+        print("\n Server IP:\033[5;30;42m %s \033[0;0m" % ip_address)
         
         url = Request(site_url_formatted,
             headers={'User-Agent': 'Mozilla/5.0'})
@@ -32,7 +32,6 @@ try:
         # to perform a GET request and load the
         # content of the website and store it in a var
         response = urlopen(url).read()
-        print("\n",response)
         
 except (ValueError, NameError):
     print("\nError! Unable to query Terraform output for website URL and server IP. Have you deployed the infrastructure?\n") 
@@ -44,9 +43,10 @@ currentHash = hashlib.sha224(response).hexdigest()
 time.sleep(10)
 while True:
     try:
-        
+        print("-" * 50)
         print("\nPinging the server:")
         ping(ip_address, count=1, verbose=True)
+        print("-" * 50)
         
         # perform the get request and store it in a var
         response = urlopen(url).read()
