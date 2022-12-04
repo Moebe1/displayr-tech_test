@@ -101,7 +101,7 @@ This script uses the output from Terraform to get the EC2 instance URL and IP ad
 
 1. Ensure that you have Python3, PIP3 installed and mark the script as executable by using chmod +x:
 ```
-chmod +x perodic_hc.py
+chmod +x periodic_hc.py
 ```
 2. Install the required libraries
 ```
@@ -111,6 +111,17 @@ pip3 install -r requirements.txt
 ```
 sudo python periodic_hc.py
 ```
+
+When the script executes, it will first get the Server URL and Server IP address from terraform output as raw.
+
+The script will then attempt to open the the URL using a get request from Urllib3
+
+The script will then Ping the server to ensure it is reachable and display the results on screen.
+
+Next, the script will compute the hash, wait a pre-dermined period and re-compute the hash and compare that with the previous value. If the HASH is the same or if it has changed will be displayed on screen.
+
+The periodicity of the script can be altered by changing the values for time.sleep() in the script.
+
 Exit the script by pressing 
 ```
 Ctrl+C
