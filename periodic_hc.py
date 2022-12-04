@@ -63,20 +63,23 @@ while True:
             print("\n \033[1;30;42m No changes to the hash value detected \033[0;0m\n")
             continue
  
-        # If the Hash Canges
+        # If the Hash changes
         else:
             # notify
             print("\033[1;30;41m Hash has changed, check the site for defacement or other changes \033[0;0m\n")
  
             response = urlopen(url).read()
  
-            # create a hash
+            # create a Hash for the next comparison
             currentHash = hashlib.sha224(response).hexdigest()
  
             #Set Sleep Duration
             time.sleep(10)
             continue
  
-    # To handle exceptions
+    # handle exceptions
     except Exception as e:
-        print("error")
+        print(e)
+    except KeyboardInterrupt:
+        print("Exiting Script")
+        sys.exit()
