@@ -79,7 +79,7 @@ chmod +x healthcheck.sh
 ```
 ./deploy.sh
 ```
-This script will run Terraform Apply with Auto Approve. When Terraform has finished executing the shell script will then run healthcheck.sh which will inform the user when the site is available and will print a link. Ctrl + Click to open the hello world website.
+This script will run Terraform Apply with Auto Approve. When Terraform has finished executing the shell script will then run healthcheck.sh which is a site/webserver readyness check and will inform the user when the site is available and display a link. Ctrl + Click to open the hello world webpage.
 
 The resourcces can be destroyed using the destroy.sh shell sciript.
 ```
