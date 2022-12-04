@@ -1,1 +1,2 @@
 pythonping==1.1.4
+pyfiglet==0.8.post1
