@@ -73,7 +73,7 @@ This script automates the deployment process and will run terraform appy -var-fi
 ```
 chmod +x deploy.sh
 chmod +x destroy.sh
-chmod +x healthcheck.sh
+chmod +x ready_check.sh
 ```
 
 ```
