@@ -1,4 +1,5 @@
 # Displayr Tech Test Submission
+The tech test has the following requirements:
 
 **The Goal**
 Using infrastructure as code, set up a hello world web server in AWS/Azure, and write a script for the server health check.
@@ -14,7 +15,7 @@ Using infrastructure as code, set up a hello world web server in AWS/Azure, and 
 
 # Documentation
 The repository contains IaC using Terraform to provision and deploy an EC2 instance to your AWS account and create a hello world web page.
-The tech test has the following requirements:
+
 
 
 # Instructions:
