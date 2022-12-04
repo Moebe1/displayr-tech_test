@@ -40,6 +40,7 @@ The repository contains IaC using Terraform to provision and deploy an EC2 insta
 5. The associated Security Groups may be editied by changing the **sg.tf** file
 
 6. **main.tf** contians the resource definitions, the AMI ID is currently hardcoded for Ubuntu 20.04 LTS on line 43
+   
    Uncomment line 58 to trigger a destroy and replace for the EC2 instance
    
 # Running the Code
