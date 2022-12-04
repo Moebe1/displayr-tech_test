@@ -7,10 +7,14 @@ from urllib.request import urlopen, Request
 import platform
 from pythonping import ping
 import sys
+import pyfiglet
 
-print("""\nThis script will monitor the server and the website for changes. If the page is defaced or changed
-    the resulting Hash will be different and you will see an alert on screen. The script will also periodically
-    ping the server and display the RTT and IP address on screen.\n""")
+ascii_banner = pyfiglet.figlet_format("Health Check")
+print(ascii_banner)
+
+print("""\nThis script will monitor the server and the website for changes. If the page is defaced or changed 
+the resulting Hash will be different and you will see an alert on screen. The script will also periodically 
+ping the server and display the RTT and IP address on screen.\n""")
 
 try:
     site_url = sp.getoutput('terraform output -raw hello_world_link')
