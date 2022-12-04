@@ -4,7 +4,6 @@ variable "aws_region" {
     default = "ap-southeast-2"
 }
 
-
 variable "aws_access_key" {
     description = "AWS Access Key"
     type = string
@@ -38,15 +37,13 @@ variable "azs" {
 variable "public_subnet_cidr" {
     description = "CIDR block for the public subnet, dfault is /28 for 16 total hosts"
     type = string
-    default = "10.0.101.0/28"
-  
+    default = "10.0.101.0/28" 
 }
 
 variable "instance_type" {
     description = "Default AWS EC2 Instance Type"
     type = string
     default = "t3.micro"
-  
 }
 
 variable "instance_keypair" {
