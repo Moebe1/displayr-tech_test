@@ -10,4 +10,4 @@ echo -e
 echo -e "${green}Please wait, starting health check in 5 seconds${reset}"
 echo -e
 sleep 5 
-./healthcheck.sh
+./ready_check.sh
