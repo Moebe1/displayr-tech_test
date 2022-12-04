@@ -12,7 +12,7 @@ Using infrastructure as code, set up a hello world web server in AWS/Azure, and 
 - Automate as much as possible. 
 - The code must be stored in a source control tool of your choice and a link must be provided
 
-#Documentation
+# Documentation
 The repository contains IaC using Terraform to provision and deploy an EC2 instance to your AWS account and create a hello world web page.
 The tech test has the following requirements:
 
